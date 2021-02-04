@@ -3,6 +3,7 @@ import { getSpeciesAndLocations } from '../apis/whale'
 import SpeciesForm from './SpeciesForm'
 import LocationsForm from './LocationsForm'
 
+
 const Home = () => {
     return (
         <>
