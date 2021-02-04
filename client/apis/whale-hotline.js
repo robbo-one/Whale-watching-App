@@ -17,6 +17,7 @@ export function getSightingsInLocation(location){
   .get(baseUrl)
   .query({near : location})
   .query({limit: 5})
+  .query({radius : 0.1})
   .then(res => {
     return res.body
   })

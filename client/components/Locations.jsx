@@ -3,10 +3,12 @@ import React, { useState, useEffect } from 'react'
 import { getSightingsInLocation } from '../apis/whale-hotline'
 const Locations = (props) => {
 
+    const latLong = props.match.params.latLong
+
     const [sightings, updateSightings] = useState([])
 
     const getSightings = () => {
-        getSightingsInLocation("48.3740,-123.7356")
+        getSightingsInLocation(latLong)
             .then(sightings => {
                 updateSightings(sightings)
             })

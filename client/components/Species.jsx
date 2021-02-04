@@ -3,11 +3,15 @@ import React, { useState, useEffect } from 'react'
 import { getSightingsOfSpecies } from '../apis/whale-hotline'
 
 const Species = (props) => {
+    // console.log(props)
+    const name = props.match.params.name
+    console.log(name)
+
 
     const [sightings, getSightings] = useState([])
 
     const updateSpecies = () => {
-        getSightingsOfSpecies("orca")
+        getSightingsOfSpecies(name)
         .then(sightings => {
             getSightings(sightings)
         })

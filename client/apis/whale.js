@@ -15,7 +15,7 @@ export function getSpecies() {
     return request
     .get(baseUrl)
     .then(res => {
-        // console.log(res.body.species)
+        // (res.body.species)
         return res.body.species
     })
 }
@@ -24,7 +24,7 @@ export function getLocations() {
     return request
     .get(baseUrl)
     .then(res => {
-        console.log(res.body.locations)
+        // console.log(res.body.locations)
         return res.body.locations
     })
 }
