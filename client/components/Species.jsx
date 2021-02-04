@@ -1,7 +1,7 @@
 import React from 'react'
-import { getSpeciesAndLocations } from '../apis/whale'
+// import { getSpeciesAndLocations } from '../apis/whale'
 
-const Home = () => {
+const Species = () => {
     return (
         <>
            <p>Hi</p> 
@@ -10,5 +10,4 @@ const Home = () => {
     )
   }
   
-  export default Home
-  
+  export default Species
