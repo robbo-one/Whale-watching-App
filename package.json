@@ -13,7 +13,7 @@
     "dev:server": "nodemon server",
     "knex": "knex --knexfile ./server/db/knexfile.js",
     "start": "node server",
-    "build": "npm run webpack",
+    "build": "npm run webpack && npm run knex -- migrate:latest",
     "server": "node server",
     "test": "jest",
     "test:watch": "jest --watchAll",
@@ -42,6 +42,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "knex": "^0.21.17",
+    "pg": "^8.5.1",
     "react-router-dom": "^5.2.0",
     "sqlite3": "^5.0.1",
     "superagent": "^6.1.0"
