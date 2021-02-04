@@ -6,7 +6,7 @@ const SpeciesForm = () => {
 
   const[dataSet, setDataSet] = useState([])
   const[speciesPicture, setSpeciesPicture] = useState("")
-  const [id, setId] = useState(0)
+  const [name, setName] = useState("")
   const [redirect, setRedirect] = useState(false)
   // const[location, setSpeciesName] = useState([{name:""}])
 
@@ -31,7 +31,7 @@ const SpeciesForm = () => {
     dataSet.find(species => {
       if (species.name == selectName){
         setSpeciesPicture(species.url)
-        setId(species.id)
+        setName(species.name)
       }
     })
   }
@@ -62,7 +62,7 @@ const SpeciesForm = () => {
       </form>
       
       <img style={{width: "300px"}}src={speciesPicture}></img>
-      {(redirect && <Redirect to={`/species/${id}`}/>)}
+      {(redirect && <Redirect to={`/species/${name}`}/>)}
     </>
   )
 }

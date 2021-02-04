@@ -6,9 +6,8 @@ const LocationsForm = () => {
 
   const[dataSet, setDataSet] = useState([])
   const[locationsPicture, setlocationsPicture] = useState("")
-  const [id, setId] = useState(0)
+  const [latLong, setLatLong] = useState("")
   const [redirect, setRedirect] = useState(false)
-  // const[location, setlocationsName] = useState([{name:""}])
 
 
   useEffect(()=> {
@@ -16,11 +15,9 @@ const LocationsForm = () => {
   },[])
 
   const fetchlocations = () => {
-    // getlocationsAndLocations()
     getLocations()
     .then(data => {
       setDataSet(data)
-      // console.log(data)
     })
   }
 
@@ -31,16 +28,14 @@ const LocationsForm = () => {
     dataSet.find(locations => {
       if (locations.name == selectName){
         setlocationsPicture(locations.url)
-        setId(locations.id)
+        setLatLong(locations.latLong)
       }
     })
   }
 
   const handleSubmit = (event) => {
-    // console.log(id)
     event.preventDefault()
     setRedirect(true)
-    // (<Link to={`/locations/${id}`}/>)
   }
 
 
@@ -62,7 +57,7 @@ const LocationsForm = () => {
       </form>
       
       <img style={{width: "300px"}}src={locationsPicture}></img>
-      {(redirect && <Redirect to={`/locations/${id}`}/>)}
+      {(redirect && <Redirect to={`/locations/${latLong}`}/>)}
     </>
   )
 }
