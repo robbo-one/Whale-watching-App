@@ -6,8 +6,26 @@ export function getSpeciesAndLocations(){
     return request
     .get(baseUrl)
     .then(res => {
-        console.log(res.body)
+        // console.log(res.body)
         return res.body
+    })
+}
+
+export function getSpecies() {
+    return request
+    .get(baseUrl)
+    .then(res => {
+        // console.log(res.body.species)
+        return res.body.species
+    })
+}
+
+export function getLocations() {
+    return request
+    .get(baseUrl)
+    .then(res => {
+        console.log(res.body.locations)
+        return res.body.locations
     })
 }
 

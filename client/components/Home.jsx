@@ -1,14 +1,20 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { getSpeciesAndLocations } from '../apis/whale'
-import Locations from './Locations'
-import Species from './Species'
+import SpeciesForm from './SpeciesForm'
+import LocationsForm from './LocationsForm'
+
 
 const Home = () => {
     return (
         <>
            <p>Hi</p> 
-           <Species/>
-           <Locations/>
+
+           <LocationsForm />
+           <br></br>
+           <br></br>
+
+           <SpeciesForm />
+           
         </>
     )
   }

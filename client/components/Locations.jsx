@@ -27,7 +27,6 @@ const Locations = () => {
                     <strong>Location:</strong> {sightings.location} <br></br><br></br></li>
                 })}
             </ul>
-
         </>
     )
 }
