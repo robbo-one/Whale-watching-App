@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
+import {Link, Redirect} from 'react-router-dom'
 import { getSpeciesAndLocations, getSpecies } from '../apis/whale'
 
 const SpeciesForm = () => {
 
   const[dataSet, setDataSet] = useState([])
   const[speciesPicture, setSpeciesPicture] = useState("")
+  const [id, setId] = useState(0)
+  const [redirect, setRedirect] = useState(false)
   // const[location, setSpeciesName] = useState([{name:""}])
 
 
@@ -28,33 +31,23 @@ const SpeciesForm = () => {
     dataSet.find(species => {
       if (species.name == selectName){
         setSpeciesPicture(species.url)
+        setId(species.id)
       }
     })
   }
-    // setSpeciesPicture(pic => {
-    //   console.log(pic)
-    //   return {
-    //     ...pic,
-    //     {url: event.target.value}
-    //   }
-    //   ...pic,
-    //   console.log(pic)
-    // })
-    // console.log(event.target.value)
-    // // if(id == id) {
-    //   //   (<img src={species.url}/>)
-    //   // }
-    // }
-      
 
+  const handleSubmit = (event) => {
+    // console.log(id)
+    event.preventDefault()
+    setRedirect(true)
+    // (<Link to={`/species/${id}`}/>)
+  }
 
-  // console.log(dataSet)
 
 
   return (
     <>
-      {/* <form onSubmit={handleSubmit}> */}
-      <form>
+      <form onSubmit={handleSubmit}>
         <label for="species">Choose a species:</label>
         <select  name="species" id="species" onChange={handleChange}>
         <option value="" disabled selected>Select a species</option>
@@ -64,9 +57,12 @@ const SpeciesForm = () => {
       })}
         </select>
 
+        <button>submit</button>
+
       </form>
       
       <img style={{width: "300px"}}src={speciesPicture}></img>
+      {(redirect && <Redirect to={`/species/${id}`}/>)}
     </>
   )
 }
