@@ -10,3 +10,12 @@ export function getSightingsOfSpecies(species){
     return res.body
   })
 }
+
+export function getSightingsInLocation(location){
+  return request
+  .get(baseUrl)
+  .query({near : location})
+  .then(res => {
+    return res.body
+  })
+}

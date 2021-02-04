@@ -23,7 +23,10 @@ const Species = () => {
            <p>Species</p> 
            <ul>
                {sightings.map(sightings => {
-                   return <li><strong>Description:</strong> {sightings.description} <br></br> <strong>Location:</strong> {sightings.location}</li>
+                   return <li key={sightings.id}>
+                   <strong>Description:</strong> {sightings.description} <br></br> 
+                   <strong>Location:</strong> {sightings.location}<br></br><br></br>
+                   </li> 
                })}
            </ul>
         </>
