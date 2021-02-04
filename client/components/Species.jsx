@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react'
 import { getSightingsOfSpecies } from '../apis/whale-hotline'
 
 const Species = (props) => {
-    // console.log(props)
     const name = props.match.params.name
-    console.log(name)
+    name.replace(" ", "%20")
+    
 
 
     const [sightings, getSightings] = useState([])
