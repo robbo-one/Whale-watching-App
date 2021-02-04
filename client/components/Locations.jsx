@@ -4,7 +4,7 @@ import React from 'react'
 const Locations = () => {
     return (
         <>
-           <p>Hi</p> 
+           <p>Locations</p> 
            
         </>
     )
