@@ -11,7 +11,7 @@ const App = () => {
       {/* <Home /> */}
       <Route path="/" exact component={Home}/>
       <Route path="/species/:name" exact component={Species}/>
-      <Route path="/locations/:name" exact component={Locations}/>
+      <Route path="/locations/:latLong" exact component={Locations}/>
 
     </>
   )

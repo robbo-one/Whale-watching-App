@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 // import { getSpeciesAndLocations } from '../apis/whale'
 import { getSightingsInLocation } from '../apis/whale-hotline'
-const Locations = () => {
+const Locations = (props) => {
 
     const [sightings, updateSightings] = useState([])
 

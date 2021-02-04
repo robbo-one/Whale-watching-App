@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 // import { getSpeciesAndLocations } from '../apis/whale'
 import { getSightingsOfSpecies } from '../apis/whale-hotline'
 
-const Species = () => {
+const Species = (props) => {
 
     const [sightings, getSightings] = useState([])
 
