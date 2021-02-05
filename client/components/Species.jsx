@@ -41,8 +41,11 @@ const Species = (props) => {
     }, [])
 
     return (
-        <>
+      <>
+        <div className="species"></div>
         <img style={{width: "300px"}}src={speciesPicture}></img>
+           <p class="speciesTitle">Species</p> 
+           <div className="speciesList">
            <p>Species {props.match.params.name[0].toUpperCase()}{props.match.params.name.slice(1, props.match.params.name.length)}</p> 
            <ul>
                {sightings.map(sightings => {
@@ -55,9 +58,13 @@ const Species = (props) => {
 
                      {/* <img src={sightings.url}></img> */}
                    </li> 
+                   
                })}
            </ul>
+           </div> 
+
         </>
+        
     )
   }
   
