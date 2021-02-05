@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'Whale';
     src: local('Whale'), url(/make-summer-fun-font/MakeSummerFun-2Oggd.ttf)format('truetype');
@@ -55,5 +56,30 @@ form{
     align-items: center;
     justify-content: space-evenly;
 
+}
+
+.locations-background {
+  background-color: rgb(181, 237, 247);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.locations-background > ul {
+  list-style: none;
+  background-color: rgb(77, 210, 214);
+  border-style: solid;
+  border-color: blanchedalmond;
+  padding: 15px
+}
+
+.locations-spacing {
+  border-style: solid;
+  border-color: blanchedalmond;
+  padding: 15px;
+  margin: 10px;
 }
 
