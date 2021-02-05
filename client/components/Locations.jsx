@@ -39,9 +39,9 @@ const Locations = (props) => {
 
         <div className='locations-background'>
 
-       
+      
         <img style={{width: "300px"}}src={locationsPicture}></img>
-            <p>Locations</p>
+            <h1>Location</h1>
             <ul>
                 {sightings.map(sightings => {
                     return <li key={sightings.id}><strong>Species: </strong> {sightings.species[0].toUpperCase()}{sightings.species.slice(1, sightings.species.length)}<br></br>

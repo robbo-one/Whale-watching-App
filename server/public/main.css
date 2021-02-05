@@ -12,7 +12,7 @@
 
 .speciesList {
     display:flex;
-
+margin-left:200px;
     padding: 20px;
     background-color:goldenrod;
     opacity: 0.7;
@@ -24,6 +24,7 @@
 }
 
 .speciesTitle {
+  margin-left:200px;
     font-size:80px;
     font-family: 'Big Shoulders Display', cursive;
     color:white;
@@ -90,7 +91,7 @@ form{
 
 .locations-background {
   background-color: rgb(181, 237, 247);
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
