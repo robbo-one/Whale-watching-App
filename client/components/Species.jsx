@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 // import { getSpeciesAndLocations } from '../apis/whale'
 import { getSightingsOfSpecies } from '../apis/whale-hotline'
+import { Link } from 'react-router-dom'
 
 const Species = (props) => {
     const name = props.match.params.name
@@ -25,6 +26,7 @@ const Species = (props) => {
     return (
         <>
            <p>Species</p> 
+           <Link to={'/'}><button>Home</button></Link>
            <ul>
                {sightings.map(sightings => {
                    return <li key={sightings.id}>

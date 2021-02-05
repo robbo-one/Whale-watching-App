@@ -6,8 +6,7 @@ import LocationsForm from './LocationsForm'
 
 const Home = () => {
     return (
-        <>
-           <p>Hi</p> 
+        <> 
 
            <LocationsForm />
            <br></br>
@@ -18,6 +17,8 @@ const Home = () => {
         </>
     )
   }
+
+  
   
   export default Home
   

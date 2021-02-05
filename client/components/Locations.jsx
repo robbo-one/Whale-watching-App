@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 // import { getSpeciesAndLocations } from '../apis/whale'
 import { getSightingsInLocation } from '../apis/whale-hotline'
 const Locations = (props) => {
@@ -21,12 +22,14 @@ const Locations = (props) => {
     return (
         <>
             <p>Locations</p>
+            <Link to={'/'}><button>Home</button></Link>
             <ul>
                 {sightings.map(sightings => {
                     return <li key={sightings.id}><strong>Species: </strong> {sightings.species}<br></br>
-                    <strong>Description</strong> {sightings.description}<br></br>
-                    <strong>Quantity</strong> {sightings.quantity} <br></br>
-                    <strong>Location:</strong> {sightings.location} <br></br><br></br></li>
+                        <strong>Description</strong> {sightings.description}<br></br>
+                        <strong>Quantity</strong> {sightings.quantity} <br></br>
+                        <strong>Location:</strong> {sightings.location} <br></br><br></br></li>
+
                 })}
             </ul>
         </>
