@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import { getSpeciesAndLocations } from '../apis/whale'
 import SpeciesForm from './SpeciesForm'
 import LocationsForm from './LocationsForm'
@@ -6,18 +6,15 @@ import LocationsForm from './LocationsForm'
 
 const Home = () => {
     return (
-        <> 
 
-           <LocationsForm />
-           <br></br>
-           <br></br>
-           <SpeciesForm />
-           
-        </>
+        <div className="home">
+            <div className="home-forms">
+                <LocationsForm />
+                <SpeciesForm />
+            </div>
+        </div>
     )
-  }
+}
 
-  
-  
-  export default Home
-  
+export default Home
+

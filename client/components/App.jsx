@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom'
 const App = () => {
   return (
     <>
+      {/* <Home /> */}
+      <h1 className="home-h1">Whale Watching</h1>
       <Link to={'/'}><h1>Home</h1></Link>
       <Route path="/" exact component={Home}/>
       <Route path="/species/:name" exact component={Species}/>

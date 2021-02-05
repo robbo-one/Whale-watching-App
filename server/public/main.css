@@ -1,3 +1,63 @@
+
+@font-face {
+    font-family: 'Whale';
+    src: local('Whale'), url(/make-summer-fun-font/MakeSummerFun-2Oggd.ttf)format('truetype');
+  }
+
+.home{
+    display:flex;
+    flex-flow: column wrap;
+}
+
+.home-h1{
+    font-family: Whale;
+    display: flex;
+    justify-content: center;
+}
+
+.home-forms{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+
+form{
+    display: flex;
+    flex-flow: column wrap;
+    
+}
+
+.species-form{
+    display: flex;
+    flex-flow: column wrap;
+    background-color: purple;
+    margin-right: 6%;
+    width:30%;
+    height: 300px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.locations-label {
+    background-color: blue;
+}
+
+.species-label {
+    background-color: blue;
+}
+
+.locations-form{
+    display: flex;
+    flex-flow: column wrap;
+    background-color: purple;
+    margin-left: 6%;
+    width:30%;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
 .locations-background {
   background-color: rgb(181, 237, 247);
   height: 100vh;
@@ -22,3 +82,4 @@
   padding: 15px;
   margin: 10px;
 }
+
