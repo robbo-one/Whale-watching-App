@@ -49,7 +49,7 @@ const Locations = (props) => {
                     <strong>Orca Type</strong> {sightings.orca_type} <br></br>
                     <strong>Location:</strong> {sightings.location} <br></br>
                     <strong>Orca type:</strong> {sightings.orca_type} <br></br>
-                    <strong>Sighted:</strong> <ul> <li>Date: {sightings.sighted_at.slice(0, 10)}</li> <li>Time: {sightings.sighted_at.slice(12, sightings.sighted_at.length -1)}</li></ul> <br></br><br></br>
+                    <strong>Sighted at:</strong> <ul> <li>Date: {sightings.sighted_at.slice(0, 10)}</li> <li>Time: {sightings.sighted_at.slice(12, sightings.sighted_at.length -1)}</li></ul> <br></br><br></br>
                     </li>
                 })}
             </ul>
