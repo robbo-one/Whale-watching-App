@@ -47,22 +47,24 @@ const SpeciesForm = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <label for="species">Choose a species:</label>
+    <div className="species-form">
+      <form onSubmit={handleSubmit} >
+        <label className="species-label"for="species">Choose a species:</label>
         <select  name="species" id="species" onChange={handleChange}>
         <option value="" disabled selected>Select a species</option>
       {dataSet.map(species => {
         return(<option key={species.id} value={species.name}>{species.name}</option>
-        )
-      })}
+          )
+        })}
         </select>
 
-        <button>submit</button>
+        <button>Submit</button>
 
       </form>
       
       <img style={{width: "300px"}}src={speciesPicture}></img>
       {(redirect && <Redirect to={`/species/${name}`}/>)}
+      </div>
     </>
   )
 }

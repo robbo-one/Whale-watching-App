@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { getLocations } from '../apis/whale'
 // import { getSpeciesAndLocations } from '../apis/whale'
 import { getSightingsInLocation } from '../apis/whale-hotline'
@@ -35,7 +36,10 @@ const Locations = (props) => {
     }, [])
 
     return (
-        <>
+
+        <div className='locations-background'>
+
+       
         <img style={{width: "300px"}}src={locationsPicture}></img>
             <p>Locations</p>
             <ul>
@@ -45,11 +49,11 @@ const Locations = (props) => {
                     <strong>Orca Type</strong> {sightings.orca_type} <br></br>
                     <strong>Location:</strong> {sightings.location} <br></br>
                     <strong>Orca type:</strong> {sightings.orca_type} <br></br>
-                    <strong>Sighted:</strong> <ul> <li>Date: {sightings.sighted_at.slice(0, 10)}</li> <li>Time: {sightings.sighted_at.slice(12, sightings.sighted_at.length -1)}</li></ul> <br></br><br></br>
+                    <strong>Sighted at:</strong> <ul> <li>Date: {sightings.sighted_at.slice(0, 10)}</li> <li>Time: {sightings.sighted_at.slice(12, sightings.sighted_at.length -1)}</li></ul> <br></br><br></br>
                     </li>
                 })}
             </ul>
-        </>
+        </div>
     )
 }
 
