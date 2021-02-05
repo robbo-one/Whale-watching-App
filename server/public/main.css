@@ -1,0 +1,30 @@
+
+.species {
+    background-image: url('https://images.pexels.com/photos/4801188/pexels-photo-4801188.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    z-index: -1;
+}
+
+.speciesList {
+    display:flex;
+
+    padding: 20px;
+    background-color:goldenrod;
+    opacity: 0.7;
+    width:400px;
+    height: auto;
+    border: 5px solid black;
+    font-size: 30px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.speciesTitle {
+    font-size:80px;
+    font-family: 'Big Shoulders Display', cursive;
+    color:white;
+}

@@ -36,19 +36,24 @@ const Species = (props) => {
     }, [])
 
     return (
-        <>
+      <>
+        <div className="species"></div>
         <img style={{width: "300px"}}src={speciesPicture}></img>
-           <p>Species</p> 
-           <ul>
+           <p class="speciesTitle">Species</p> 
+           <div className="speciesList"><ul>
                {sightings.map(sightings => {
                    return <li key={sightings.id}>
                    <strong>Description:</strong> {sightings.description} <br></br> 
                    <strong>Location:</strong> {sightings.location}<br></br><br></br>
                      {/* <img src={sightings.url}></img> */}
                    </li> 
+                   
                })}
            </ul>
+           </div> 
+
         </>
+        
     )
   }
   
