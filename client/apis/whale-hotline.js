@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-const baseUrl = 'http://hotline.whalemuseum.org/api.json'
+const baseUrl = 'https://hotline.whalemuseum.org/api.json'
 
 export function getSightingsOfSpecies(species){
   return request
