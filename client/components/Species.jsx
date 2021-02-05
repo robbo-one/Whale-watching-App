@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react'
 // import { getSpeciesAndLocations } from '../apis/whale'
 import { getSightingsOfSpecies } from '../apis/whale-hotline'
+
+import { Link } from 'react-router-dom'
+
 import { getSpecies } from '../apis/whale'
+
 
 
 const Species = (props) => {
