@@ -20,19 +20,18 @@ const Locations = (props) => {
     }, [])
 
     return (
-        <>
-            <p>Locations</p>
-            <Link to={'/'}><button>Home</button></Link>
+        <div className='locations-background'>
+            <h1>Locations</h1>
             <ul>
                 {sightings.map(sightings => {
-                    return <li key={sightings.id}><strong>Species: </strong> {sightings.species}<br></br>
+                    return <li className='locations-spacing' key={sightings.id}><strong>Species: </strong> {sightings.species}<br></br>
                         <strong>Description</strong> {sightings.description}<br></br>
                         <strong>Quantity</strong> {sightings.quantity} <br></br>
                         <strong>Location:</strong> {sightings.location} <br></br><br></br></li>
 
                 })}
             </ul>
-        </>
+        </div>
     )
 }
 

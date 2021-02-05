@@ -26,7 +26,6 @@ const Species = (props) => {
     return (
         <>
            <p>Species</p> 
-           <Link to={'/'}><button>Home</button></Link>
            <ul>
                {sightings.map(sightings => {
                    return <li key={sightings.id}>
