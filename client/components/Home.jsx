@@ -11,7 +11,6 @@ const Home = () => {
            <LocationsForm />
            <br></br>
            <br></br>
-
            <SpeciesForm />
            
         </>
