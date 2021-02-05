@@ -7,8 +7,8 @@ import Locations from './Locations'
 const App = () => {
   return (
     <>
-      <h1>Whale Watching</h1>
       {/* <Home /> */}
+      <h1 className="home-h1">Whale Watching</h1>
       <Route path="/" exact component={Home}/>
       <Route path="/species/:name" exact component={Species}/>
       <Route path="/locations/:latLong" exact component={Locations}/>
